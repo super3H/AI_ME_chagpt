@@ -53,3 +53,30 @@
 - updated_at: 2026-02-24
 - valid_until: none
 - invalidation_trigger: 用户明确要求手动选题
+
+### MEM-USER-20260224-PATENT-APP
+- type: user
+- content: 分身新增应用“专利”，后续可按专利链路执行方向筛选与交底书草案生成。
+- source: 用户明确说明
+- confidence: high
+- updated_at: 2026-02-24
+- valid_until: none
+- invalidation_trigger: 用户明确关闭专利应用或更改专利流程
+
+### MEM-USER-20260224-PATENT-STYLE-3REF
+- type: user
+- content: 后续专利内容修改默认对齐三份参考交底书风格（广域容量巡检/数据流动/数据流动调度策略）。
+- source: 用户明确说明
+- confidence: high
+- updated_at: 2026-02-24
+- valid_until: none
+- invalidation_trigger: 用户明确指定新风格基线
+
+### MEM-USER-20260224-NOVEL-APP
+- type: user
+- content: 分身新增应用“小说”，后续可按小说链路执行选题筛选、分章大纲和样章生成。
+- source: 用户明确说明
+- confidence: high
+- updated_at: 2026-02-24
+- valid_until: none
+- invalidation_trigger: 用户明确关闭小说应用或更改小说流程

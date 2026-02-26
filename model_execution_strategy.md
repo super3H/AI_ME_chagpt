@@ -48,3 +48,17 @@
 - 默认行为：长视频任务执行 `skill_10 -> skill_11` 时，自动采用 `skill_10` 最高分选题生成成片文稿。
 - 同分规则：优先 `汇合清晰度`，其次 `证据密度`，再次 `制作可行性`。
 - 仅在用户明确点名其他题目时，覆盖自动选择。
+
+## PATENT_APPLICATION
+- 当任务为“专利应用”时，执行链路固定为：
+  - `30_skills/patent/skill_10_patent_topic_operator.md`
+  - `30_skills/patent/skill_11_patent_draft_operator.md`
+- 默认自动采用 `skill_10` 最高分方向进入交底书草案。
+- 同分规则：权利要求可覆盖性 > 技术差异度 > 商业价值。
+
+## NOVEL_APPLICATION
+- 当任务为“小说应用”时，执行链路固定为：
+  - `30_skills/novel/skill_10_novel_topic_operator.md`
+  - `30_skills/novel/skill_11_novel_draft_operator.md`
+- 默认自动采用 `skill_10` 最高分方向进入分章与样章。
+- 同分规则：冲突可持续性 > 人物成长空间 > 写作可执行性。

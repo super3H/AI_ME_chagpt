@@ -43,3 +43,15 @@
 ## AUTO_SELECTION_POLICY
 - 视频任务在完成选题评分后，不二次等待确认，默认直接进入最高分题目的脚本阶段。
 - 若用户在同一轮明确指定题目，则跳过自动选择并按用户指令执行。
+
+## PATENT_EXECUTION
+- 专利任务先调用 `30_skills/patent/skill_10_patent_topic_operator.md` 完成方向筛选与打分。
+- 再调用 `30_skills/patent/skill_11_patent_draft_operator.md` 生成交底书草案。
+- 默认自动采用最高分方向；若用户点名方向则覆盖自动选择。
+- 输出必须包含“申请风险与代理人复核清单”。
+
+## NOVEL_EXECUTION
+- 小说任务先调用 `30_skills/novel/skill_10_novel_topic_operator.md` 完成方向筛选与打分。
+- 再调用 `30_skills/novel/skill_11_novel_draft_operator.md` 生成分章与样章。
+- 默认自动采用最高分方向；若用户点名方向则覆盖自动选择。
+- 输出必须包含“连续写作约束”（角色状态/设定边界/文风约束）。
