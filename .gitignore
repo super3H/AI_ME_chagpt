@@ -1,0 +1,15 @@
+.aider*
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.env
+.env.*
+*.log
+*.tmp
+*.temp
+Thumbs.db
+.DS_Store
+~$*.docx
+.tmp_aider_smoketest/

@@ -1,0 +1,24 @@
+# PROJECT_MANIFEST
+
+- project_name: finance_analysis_app
+- project_goal: 基于图片、文字样本和实时新闻，生成金融关注方向与行动建议。
+- parent_skill_family: application
+- primary_skills:
+  - `30_skills/finance/skill_10_finance_focus_operator.md`
+  - `30_skills/finance/skill_11_finance_brief_operator.md`
+  - `30_skills/core/skill_04_risk_evaluation_operator.md`
+  - `30_skills/core/skill_05_compression_operator.md`
+- input_dirs:
+  - `40_projects/finance_analysis_app/data/`
+  - `40_projects/finance_analysis_app/src/`
+- output_dirs:
+  - `40_projects/finance_analysis_app/data/cases/`
+  - `40_projects/finance_analysis_app/data/style_profile.json`
+- execution_rules:
+  - 先识别输入源（文本 / 图片 / 新闻），再决定降级到规则模式还是调用模型。
+  - 对外部新闻类输入，优先保证时间敏感信息是最新的。
+  - 输出默认包含：主线判断、跟踪清单、风险清单、短期行动建议。
+  - 如果用户点名“金融分身”，默认将本项目视为该分身的应用入口之一。
+- fallback_rules:
+  - 没有项目专属技能时，优先回退到 `60_finance/finance_routing.md`。
+  - 如果任务变成纯研究或纯写作，可临时切换到 `research` 或 `writing` 技能族。
